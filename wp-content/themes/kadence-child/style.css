@@ -76,8 +76,8 @@ Updated: 2024-07-07 10:22:03
 
 .img1 {
     position: absolute !important;
-    bottom: 21%;
-    right: 55%;
+    bottom: 19%;
+    right: 54%;
 
 }
 
@@ -170,7 +170,12 @@ Updated: 2024-07-07 10:22:03
 @media (max-width: 1024px) {
 
 
+    .img1 {
+        position: absolute !important;
+        bottom: 19%;
+        right: 58%;
 
+    }
 
 
 
@@ -195,6 +200,13 @@ Updated: 2024-07-07 10:22:03
 @media (max-width: 767.991px) {
 
 
+    .img1 {
+        position: absolute !important;
+        bottom: 19%;
+        right: 60%;
+
+    }
+
 
     .img2 {
         position: relative !important;
@@ -213,7 +225,7 @@ Updated: 2024-07-07 10:22:03
 
     }
 
-    
+
 
 }
 
