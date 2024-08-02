@@ -11,7 +11,6 @@ Updated: 2024-07-07 10:22:03
 
 */
 
-
 .wpcf7-textarea {
     width: 100%;
     position: relative !important;
@@ -86,20 +85,32 @@ Updated: 2024-07-07 10:22:03
 
 .img2 {
     position: relative !important;
-    right: 17%;
-    bottom: 35%;
+    right: -16%;
+    bottom: 130%;
 
 
 }
 
 .img3 {
     position: relative !important;
-    left: 17%;
-    bottom: 65%;
+    left: -17%;
+    bottom: 130%;
 
 
 
 }
+
+
+.img4 {
+    position: relative !important;
+    z-index: 10 !important;
+
+
+
+}
+
+
+
 
 
 #wpcf7-f714-p2-o5 {
@@ -181,30 +192,35 @@ Updated: 2024-07-07 10:22:03
 
 
 
-
 @media (max-width: 767.991px) {
 
 
 
     .img2 {
         position: relative !important;
-        right: 11%;
-        bottom: 35%;
+        right: -27%;
+        bottom: 175%;
 
 
     }
 
     .img3 {
         position: relative !important;
-        left: 10%;
-        bottom: 62%;
+        left: -28%;
+        bottom: 175%;
 
 
 
     }
 
+    
 
 }
+
+
+
+
+
 
 
 
