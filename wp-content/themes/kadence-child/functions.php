@@ -43,15 +43,20 @@ add_filter('fluentform_rendering_field_html_button', function ($html, $data, $fo
 
 // END ENQUEUE PARENT ACTION
 
-add_filter( 'wp_nav_menu_items','add_admin_link', 10, 2 );
+add_filter( 'wp_nav_menu_items','add_admin_link', 2 , 10 );
 
-function add_admin_link( $items, $args ) {
+function add_admin_link( $items, $args  ) {
 
     if (is_user_logged_in() && $args->theme_location == 'primary') {
 
+        
+        
         $items .= '<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-588"><a href="'. get_admin_url() .'">Admin</a></li>';
+        
+        
 
-    }
+}
+
 
     return $items;
 }
@@ -59,8 +64,46 @@ function add_admin_link( $items, $args ) {
 function register_menus() {     
     register_nav_menus( 
         array( 
-            'principal' => 'Principal' 
+            'header' => 'header' 
         ) 
     ); 
 }
 add_action('init', 'register_menus');
+
+
+
+
+
+
+
+
+function disable_gutenberg_autop_for_relative_links( $content ) {
+    // Désactiver les conversions automatiques
+    return str_replace(home_url(), '', $content);
+}
+add_filter( 'content_save_pre', 'disable_gutenberg_autop_for_relative_links' );
+
+
+function disable_gutenberg_autosave() {
+    wp_deregister_script('autosave');
+}
+add_action('wp_print_scripts', 'disable_gutenberg_autosave');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
